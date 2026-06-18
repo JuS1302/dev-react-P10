@@ -34,9 +34,12 @@ app.use(helmet());
 app.use(
   cors({
     origin:
-      process.env.NODE_ENV === "production"
-        ? ["https://abricot-frontend-7fs6.onrender.com"]
-        : ["http://localhost:8000", "http://localhost:8001", "http://localhost:3000"],
+    [
+      "https://abricot-frontend-7fs6.onrender.com",
+      "http://localhost:3000",
+      "http://localhost:8000",
+      "http://localhost:8001",
+    ],
     credentials: true,
   })
 );
